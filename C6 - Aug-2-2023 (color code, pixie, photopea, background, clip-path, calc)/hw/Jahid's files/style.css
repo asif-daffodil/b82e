@@ -1,0 +1,20 @@
+.jahid {
+    font-size: 67px;
+    letter-spacing: 6px;
+    font-variant: small-caps;
+    font-family: Arial;
+    -webkit-text-stroke: 3px rgb(28, 208, 240);
+    color: white;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px rgb(10, 10, 10);
+    font-style: italic;
+    padding: 20px;
+    width: max-content;
+    margin: auto;
+    outline: 6px dashed rgb(9, 226, 226);
+    border: 3px solid rgb(9, 226, 226);
+    border-radius: 9px;
+    margin-top: 6px;
+    box-shadow: 0 0 18px black , 0 0 18px black inset;
+    
+}

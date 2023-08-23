@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.jahid {
+    font-size: 116px;
+    font-weight: bolder;
+    font-style: italic;
+    font-variant: small-caps;
+    text-align: center;
+    line-height: 200px;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    background-image: url("../image/bd.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: center center;
+    background-position: top;
+    -webkit-text-stroke: rgb(18, 146, 250) 1.5px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background: linear-gradient(to top right, #000, #fff, #000);
+    height: 650px;
+}

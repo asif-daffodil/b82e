@@ -1,0 +1,21 @@
+.ami{
+    color: hotpink;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    background: lightgrey;
+    line-height: 60px;
+    width: max-content;
+    -webkit-text-stroke: 1px blue;
+    font-family: arial;
+    text-shadow: 3px 3px 3px black;
+    padding: 20px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 6px;
+    box-shadow: 6px 6px 6px #000;
+}

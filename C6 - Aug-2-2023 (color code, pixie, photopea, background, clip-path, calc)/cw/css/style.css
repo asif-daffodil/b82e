@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.b82e{
+    color: #FBC115;
+    width: 200px;
+    background: #333;
+    padding: 20px;
+}
+
+.b82m {
+    width: 200px;
+    padding: 20px;
+    background: rgba(50, 205, 50, 0.6);
+    margin-top: -20px;
+    margin-left: 20px;
+    clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
+}
+
+.bd{
+    line-height: 300px;
+    width: max-content;
+    /* 
+    background-image: url("../images/jahid.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    */
+    /* background: url("../images/jahid.jpg") no-repeat center /auto 100%; */
+    /* background-image: radial-gradient(white, blue, black 70%); */
+    background: linear-gradient(to top right, rgba(0, 0, 255, 0.6), rgba(255, 255, 255, 0.6), rgba(0, 0, 255, 0.6)), url("../images/jahid.jpg") no-repeat center /100% 100%;
+    background-attachment: fixed;
+    margin: auto;
+    margin-bottom: 3000px;
+    margin-top: 200px;
+    font-size: 66px;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    font-variant: small-caps;
+    text-align: center;
+    -webkit-text-stroke: #FBC115 1px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+}

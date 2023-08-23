@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=REM:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main, .pain{
+    width: 200px;
+    height: 200px;
+    background: red;
+    margin: 20px;
+    position: relative;
+}
+
+.pain{
+    background: blue;
+    margin-top: -40px;
+    margin-left: 40px;
+    z-index: -10;
+}
+
+.rain{
+    width: 100px;
+    height: 100px;
+    background: green;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+.hero {
+    font-size: 24px;
+    padding: 20px;
+}
+
+.hero::before{
+    content: "Mr. ";
+}
+.hero::after{
+    content: attr(ln);
+}
+
+.bd{
+    width: 300px;
+    height: 200px;
+    background: green;
+    margin: 20px auto;
+    display: flex;
+}
+
+.red {
+    width: 130px;
+    height: 130px;
+    background: red;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.faka{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.dhaka{
+    width: 900px;
+    margin: auto;
+    display: flex;
+}
+
+.dhaka > div:first-child{
+    margin-right: 20px;
+}
+
+.dhaka > div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.dhaka > div:last-child > h2 {
+    font-family: 'REM', sans-serif;
+}
+.dhaka > div:last-child > p {
+    margin: 20px 0;
+    font-family: 'Oswald', sans-serif;
+}

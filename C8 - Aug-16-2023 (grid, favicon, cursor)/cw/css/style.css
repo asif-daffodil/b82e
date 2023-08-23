@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url("../images/cursor.png"), auto;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main > div {
+    background: #333;
+}
+
+.abul{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+    grid-template-areas: 
+    "bb bb kb" 
+    "lb hb kb"
+    "lb cb cb";
+}
+
+.abul > div {
+    background: #33f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Barriecito', cursive;
+}
+
+.babul {
+    grid-area: bb;
+}
+.kabul {
+    grid-area: kb;
+}
+.bulbul {
+    grid-area: lb;
+}
+.habul {
+    grid-area: hb;
+}
+.chabul {
+    grid-area: cb;
+}
