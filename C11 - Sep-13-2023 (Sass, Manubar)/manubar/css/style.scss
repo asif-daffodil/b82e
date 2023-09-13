@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    width: 750px;
+    margin: 20px auto;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    background: #33f;
+    >li{
+        width: 100%;
+        >a{
+            text-decoration: none;
+            display: block;
+            color: #fff;
+            line-height: 40px;
+        }
+        &:hover{
+            background: #f33;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: fixed;
+}
+.main{ display: grid;
+grid-template-columns: 1fr 1fr ;
+-ms-grid-column-align: 1em;
+grid-gap: 1em;
+}
+.child{ 
+    background: red;
+    padding: 1em;
+    color: #fff;
+}
+.child:nth-child(odd){
+background: black;
+}
