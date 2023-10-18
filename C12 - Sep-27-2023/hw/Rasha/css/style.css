@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background:bisque;
+}
+.box{
+    height: 300px;
+    width: 600px;
+    background: rgb(64, 64, 64);
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 15%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px;
+    padding: 10px; 
+    overflow: hidden;
+}
+
+
+.picon:hover{
+    cursor: pointer;
+    transform: rotateY(180deg) ; 
+}
+.picon{
+    position: relative;
+    transition:transform 1500ms;
+    transform-style: preserve-3d;
+}
+ 
+.front,.back{
+height:100% ;
+width: 100%;
+border-radius: 10px;
+box-shadow: 0 0 1px 1px #000;
+position: absolute;
+top: 2px;
+backface-visibility: hidden;
+}
+.front{
+    background-image: url(../img/Cute-Cat-Images12.jpg);
+    background-size:cover;
+}
+.back{
+background-image: url(../img/cat3.jpg);
+background-size:cover;
+transform: rotateY(180deg);
+}
+.picrd{
+position: relative;
+
+}
+.open,.out{
+height:100% ;
+width: 100%;
+border-radius: 10px;
+box-shadow: 0 0 1px 1px #000;
+position: absolute;
+top: 2px;
+backface-visibility: hidden;
+}
+
+.open{
+    background-image: url(../img/open\ \(2\).jpg);
+    background-size:cover;
+}
+.out{
+background-image: url(../img/open\ \(1\).png);
+background-size:cover;
+}
+.out:hover{
+    transform:translate(200px,350px);
+    transition:transform 1000ms;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+    /* transition-delay:1s ; */
+}
+
+.picnd:hover{
+    cursor: pointer;
+    /* transform: rotateY(180deg) ;  */
+}
+.picnd{
+    position: relative;
+    transition:transform 1500ms;
+     /* transform-style: preserve-3d; */
+}
+.close,.in{
+height:100% ;
+width: 100%;
+border-radius: 10px;
+box-shadow: 0 0 1px 1px #000;
+position: absolute;
+ top: 2px; 
+backface-visibility: hidden;
+}
+.close{
+    background-image: url(../img/open\ \(1\).jpg);
+    background-size: cover;
+}
+.in{
+    background-image: url(../img/cartoon\ 2.jpg);
+    background-size:cover;
+    transition: 1s;
+    transform-origin:left;
+} 
+.in:hover{
+    transform:rotateY(140deg);
+}
+.ball{
+    height: 50px;
+    width: 50px;
+    background:yellow;
+    font-size: 15px;
+    font-weight: bolder;
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    left: 70%;
+    border-radius: 50%;
+   color: black;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   padding: 7px;
+   margin-top: 5px;
+   
+
+
+}

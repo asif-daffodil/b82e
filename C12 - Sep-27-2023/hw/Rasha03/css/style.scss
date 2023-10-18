@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    >.vdo{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position:absolute;
+    }
+    >.pic{
+        height:2%;
+        width: 2%;
+        position: absolute;
+        z-index:1;
+        left: 35%;
+    }
+    >ul{
+        width:200px;
+        height: 80px;
+        position: absolute;
+        list-style: none;
+        // background-color: red;
+        display: flex;
+        top: 80%;
+        left:50%;
+        text-decoration: none;
+        transform: translate(-50%,-50%);
+
+       
+        >li{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            padding-top:5%;
+            // background:rgb(235, 230, 83);;
+            position: relative;
+            overflow: hidden ;
+            &:not(:last-child){
+                margin-right: 8%;
+            }
+            
+            // &:hover{
+            //     transform: scaleX(20deg);
+            //     transform-origin: right;
+            //     transition: .5s;
+            //     background: #fff;
+            // }
+            
+          
+           
+            >a{
+                text-decoration: none;
+                display: block;
+                text-align:center;
+                line-height: 40%;
+                color:black;
+            }
+            &::before{
+                content: "";
+                height: 100%;
+                width: 100%;
+                background:burlywood;
+                position: absolute;
+                top:0;
+                left: 0;
+                z-index: -10;
+            }
+            &::after{
+                content: "";
+                height: 100%;
+                width: 100%;
+                background:black;
+                position: absolute;
+                top:100%;
+                left: 0;
+                z-index: -5;
+                transition: 0.5s;
+            }
+            &:hover{
+             &::after{
+                     top: 0;
+                     }
+                     >a{
+                        color:azure;
+                     }  
+                     &:first-child{
+                        &::after{
+                        background:blue ;
+                        }
+                     }  
+                     &:nth-child(2){
+                        &::after{
+                        background:rgb(246, 101, 101) ;
+                        } 
+                    }
+             }
+            
+            
+            
+        }
+    }
+}

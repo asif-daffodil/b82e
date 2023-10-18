@@ -1,0 +1,130 @@
+@import url();
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    width: 100%;  
+    display: flex;
+    background: #f1f1f1;
+    padding:0 3vw ;
+    >figure{
+        width: 100px;
+         >img{
+            width: 100%;
+        }
+    }
+    >.menubar{
+        list-style: none;
+        display: flex;
+        width: max-content;
+        margin-left: auto;
+        position: relative;
+        li{
+           position: relative;
+           
+            
+            a{
+                 text-decoration:none ;
+                //  display: block;
+                 padding: 0 20px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: black;
+                
+            }
+            &::before{
+                content: "";
+                width: 0%;
+                height: 6px;
+                background:red;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                transition: 0.3s;
+            } 
+            &:hover{
+                &::before{
+                width: 100%;
+                }
+                >.submenu{
+                visibility: visible;
+                transform: translate(-50%,0%); 
+                }
+                >.megamenu{
+                visibility: visible;
+                transform: translateY(0px); 
+                }
+            }
+            >.submenu{
+                list-style: none; 
+                background: #f1f1f1;
+                position: absolute;
+                width: max-content;
+                left: 50%;
+                transition: 0.5s;
+                transform: translate(-50%,5%); 
+                visibility: hidden;
+                 &::after{
+                    content: " ";
+                    width: 100%;
+                    height: 6px;
+                    background:rgba(241, 241, 241,.6) ;
+                    position: absolute;
+                    top: -6px;
+                    left: 0;
+                 }
+           li{
+            a{
+                line-height: 50px ;
+            }
+            >.subsubmenu{
+                width: 100%;
+                background: #f1f1f1;
+                position: absolute;
+                top:0;
+                left: 100%;
+                list-style: none;
+               visibility: hidden;
+               transition: 0.3s;
+               transform: translateX(5%);
+            }
+            &:hover{
+                >.subsubmenu{
+                visibility: visible;
+                transform: translateX(0%);
+                }
+            }
+           }
+        }
+        >.megamenu{
+            width: 100vw;
+            height:max-content;
+            overflow: hidden;
+            position:fixed;
+            left: 0;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 20px;
+            padding: 20px;
+            background: #f1f1f1;
+            border-top: 2px solid #fff;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: 0.3s;
+            >img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+    }
+        
+    }
+}

@@ -1,0 +1,784 @@
+/*
+Theme Name: Telly Hotel
+Theme URI: 
+Author: 
+Author URI: 
+Description: Telly Hotel is specially designed product packaged for Telly Hotel by TemplatesJungle.
+Version: 
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*------------------------------------------------
+
+CSS STRUCTURE:
+
+1. VARIABLES
+
+2. GENERAL TYPOGRAPHY
+  2.1 General Styles
+  2.2 Background Color
+  2.3 Border Radius
+  2.4 Section
+    - Section Paddings
+    - Section Margins
+    - Section Title
+    - Content width
+  2.5 Buttons
+    - Button Sizes
+    - Button Shapes
+    - Button Color Scheme
+    - Button Aligns
+
+3. CONTENT ELEMENTS
+  3.1 Button Hover Effects
+  3.2 Text Hover Effects
+  3.3 Zoom Effect
+  3.4 Left Pattern
+  3.5 Jarallax
+
+4. SITE STRUCTURE
+  4.1 Header
+    - Offcanvas
+  4.2 Intro
+  4.3 About
+  4.4 Our Works
+  4.5 Our Services
+  4.6 Brand Collections
+  4.7 Testimonials
+  4.8 Testimonial
+  4.9 Our Achievement
+  4.10 Latest Blog
+
+    
+/*--------------------------------------------------------------
+/** 1. VARIABLES
+--------------------------------------------------------------*/
+:root {
+  --accent-color:             #333;
+  --black-color:              #000;
+  --dark-color:               #111;
+  --gray-color-100:           #F9F7F5;
+  --gray-color-200:           #EFEFEF;
+  --gray-color-300:           #D1D1D1;
+  --gray-color-400:           #C0C0C0;
+  --gray-color-500:           #adb5bd;
+  --dark-gray-color:          #474341;
+  --bs-light-rgb:             rgba(255,255,255,1);
+  --light-color:              #fff;
+  --primary-color:            #ff9e0d;
+  --swiper-theme-color:       #807E7C !important;
+  --bs-primary-rgb:             255,158,13;
+}
+
+/* on mobile devices below 600px
+ */
+@media screen and (max-width: 600px) {
+    :root {
+        --header-height : 100px;
+        --header-height-min   : 80px;
+    }
+}
+
+/* Fonts */
+:root {
+    --body-font           : "Open Sans", sans-serif;
+    --heading-font        : "Oswald", serif;
+}
+
+
+/*----------------------------------------------*/
+/* 2 GENERAL TYPOGRAPHY */
+/*----------------------------------------------*/
+
+/* 2.1 General Styles
+/*----------------------------------------------*/
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--accent-color);
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  transition: 0.3s color ease-out;
+  color: inherit;
+}
+a.light {
+  color: var(--light-color);
+}
+a.stretched-link {
+  color: var(--primary-color);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+p.light {
+  color: var(--light-color);
+}
+span.light {
+  color: var(--light-color);
+}
+em.light {
+  color: var(--light-color);
+}
+table.light tr {
+   color: var(--light-color);
+}
+b, strong {
+  font-weight: bold;
+}
+.highlight {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+::selection {
+  color: var(--light-color);
+  background: var(--primary-color);
+}
+
+/* 2.2 Background Color
+/*----------------------------------------------*/
+.bg-gray-200 {
+   background-color: var(--gray-color-200);
+}
+.bg-light {
+  background-color: var(--light-color) !important;
+}
+
+/* 2.3 Border Radius
+/*----------------------------------------------*/
+.border-rounded-10 {
+   border-radius: 10px;
+}
+
+/* 2.4 Section
+/*----------------------------------------------*/
+
+/* - Section Padding
+--------------------------------------------------------------*/
+.padding-small {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.padding-medium {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.padding-large {
+  padding-top: 7em;
+  padding-bottom: 7em;
+}
+.padding-xlarge {
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+
+/* - Section margin
+--------------------------------------------------------------*/
+.margin-small {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.margin-medium {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+.margin-large {
+  margin-top: 7em;
+  margin-bottom: 7em;
+}
+.margin-xlarge {
+  margin-top: 9em;
+  margin-bottom: 9em;
+}
+
+@media only screen and (max-width: 768px) {
+  .margin-small,
+  .margin-medium,
+  .margin-large {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+/* - Section Title
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5 {
+    font-family: var(--heading-font);
+    font-weight: 500;
+    line-height: 1;
+}
+h1.light, h2.light, h3.light, h4.light, h5.light {
+    color: var(--light-color);
+}
+h1 {
+    font-size: 8em;
+}
+h2 {
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.32em;
+    padding-left: 63px;
+}
+h3 {
+    font-size: 2.9em;
+    font-weight: 900;
+}
+
+/* - Section width
+--------------------------------------------------------------*/
+.container {
+  max-width: 1300px;
+}
+.container-md {
+    max-width: 1460px;
+}
+.container-lg {
+    max-width: 1750px;
+}
+
+/*--------------------------------------------------------------
+/** 2.5 Buttons
+--------------------------------------------------------------*/
+/* - Button Sizes
+------------------------------------------------------------- */
+.btn.btn-small {
+  padding: 0.8em 1.8em;
+  font-size: 0.85em;
+}
+.btn.btn-medium {
+  padding: 1.2em 2.7em;
+  font-size: 1em;
+}
+.btn.btn-large {
+  padding: 0.8em 4.6em;
+  font-size: 1.6em;
+}
+.btn.btn-full {
+  display: block;
+  margin: .85em 0;
+  width: 100%;
+  letter-spacing: 0.12em;
+}
+
+/* - Button Shapes
+------------------------------------------------------------- */
+.btn.btn-rounded,
+.btn.btn-rounded::after {
+  border-radius: 6px;
+}
+.btn.btn-pill,
+.btn.btn-pill::after {
+  border-radius: 2em;
+}
+
+/* button outline */
+.btn.btn-outline-dark,
+.btn.btn-outline-light,
+.btn.btn-outline-accent {
+  background: transparent;
+  text-shadow: none;
+  box-shadow: none;
+}
+.btn.btn-outline-dark:hover::after,
+.btn.btn-outline-light:hover::after {
+  background-color: transparent;
+}
+.btn.btn-outline-dark {
+  border-color: rgba(0,0,0,0.4);
+  color: var(--dark-color);
+  transition: 0.5s ease-in-out;
+}
+.btn.btn-outline-dark:hover {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+.btn.btn-outline-light {
+  border-color: rgba(255,255,255,1);
+  color: var(--light-color);
+  transition: 0.5s ease-in-out;
+}
+.btn.btn-outline-light:hover {
+  color: var(--dark-color);
+}
+.btn.btn-outline-gray {
+  background: transparent;
+  border-color: var(--gray-color-200);
+  color: var(--dark-color);
+}
+.btn.btn-outline-gray:hover {
+  color: var(--light-color) !important;
+}
+.btn.btn-outline-accent {
+  background: transparent;
+  border-color: var(--accent-color);
+  color: var(--dark-color);
+}
+.btn.btn-outline-accent:hover {
+  border-color: var(--dark-color);
+  color: var(--dark-color) !important;
+}
+
+/* - Buttons Color Scheme
+------------------------------------------------------------- */
+.btn.btn-normal {
+  text-decoration: underline;
+  border: none;
+  font-weight: 800;
+}
+.btn.btn-normal:hover,
+.btn.btn-normal:focus {
+  text-decoration: none;
+  box-shadow: none;
+}
+.btn.btn-accent {
+  color: var(--light-color);
+  background-color: var(--accent-color);
+  border: none;
+}
+.btn.btn-accent:hover {
+  color: var(--light-color) !important;
+  background-color: var(--primary-color);
+}
+.btn.btn-black {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border: none;
+}
+.btn.btn-black:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+.btn.btn-light {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+.btn.btn-light:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+.btn-dark {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  border-color: var(--dark-color);
+  transition: 0.5s ease-in-out;
+}
+.btn-dark:hover {
+  color: var(--dark-color);
+}
+
+/* - Buttons Aligns
+------------------------------------------------------------- */
+.btn-left {
+  text-align: left;
+  display: block;
+}
+.btn-center {
+  text-align: center;
+  display: block;
+}
+.btn-right {
+  text-align: right;
+  display: block;
+}
+
+/*----------------------------------------------*/
+/* 3 CONTENT ELEMENTS */
+/*----------------------------------------------*/
+
+/* 3.1 Button Hover Effects
+------------------------------------------------------------- */
+.btn-slide {
+  position: relative;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 18px 44px;
+}
+.btn-slide.hover-slide-right::before {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 3%;
+  background-color: var(--primary-color);
+  transition: 0.3s ease-in-out;
+}
+.btn-slide span {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  font-weight: 900;
+}
+::before, ::after {
+  position: absolute;
+  content: "";
+}
+.btn-slide.hover-slide-right:hover::before {
+  width: 100%;
+}
+.btn-slide.hover-slide-right:hover span {
+  color: var(--light-color);
+}
+
+/* 3.2 Text Hover Effects
+------------------------------------------------------------- */
+.text-hover ul li>a,
+.text-hover a,
+a.text-hover{
+  position: relative;
+  transition: 0.3s ease-out;
+}
+.text-hover li a.nav-link:after,
+.text-hover li a:after,
+.text-hover a:after,
+a.text-hover:after{
+  content: "";
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s ease-out;
+  border-bottom: 1px solid ;
+}
+.text-hover a.active:after,
+.text-hover .active a:after,
+.text-hover.active a.nav-link:after,
+.text-hover a.nav-link:hover:after,
+.text-hover li a:hover:after,
+.text-hover a:hover:after,
+a.text-hover:hover:after,
+.text-hover li a:focus:after,
+.text-hover a:focus:after,
+a.text-hover:focus:after{
+  width: 100%;
+}
+.text-hover li a.border-0:after,
+.text-hover.border-0 li a:after {
+  border: none;
+}
+.text-hover.dropdown-menu li a:hover {
+  padding-left: 23px;
+}
+
+/* 3.3 Zoom Effect
+------------------------------------------*/
+.zoom-effect {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+}
+.zoom-effect img {
+  max-width: 100%;
+  -webkit-transition: 0.6s ease-out;
+  -moz-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+.zoom-effect:hover img {
+  -webkit-transform: scale(1.1,1.1);
+  -moz-transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);
+}
+.zoom-effect:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  -moz-transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.zoom-effect:hover:before {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* 3.4 Left Pattern
+------------------------------------------*/
+.left-pattern {
+   position: relative;
+}
+.left-pattern::before {
+  content: "";
+  position: absolute;
+  width: 52px;
+  height: 2px;
+  top: 46%;
+  left: 0;
+  background-color: var(--primary-color);
+}
+
+/*--------------------------------------------------------------
+/** 3.5 Jarallax
+--------------------------------------------------------------*/
+.jarallax {
+  position: relative;
+  z-index: 0;
+  min-height: 350px;
+}
+.jarallax>.jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.jarallax-img {
+  position: relative;
+  z-index: 0;
+}
+.jarallax img.jarallax-img {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+  z-index: -100;
+}
+
+/*----------------------------------------------*/
+/* 4 SITE STRUCTURE */
+/*----------------------------------------------*/
+
+/* 4.1 Header
+------------------------------------------------------------- */
+.site-header {
+  width: 100%;
+  z-index: 10;
+}
+.offcanvas a.nav-link {
+  font-family: var(--heading-font);
+  color: var(--light-color);
+}
+.offcanvas a.nav-link:hover,
+.offcanvas a.nav-link:focus {
+  color: var(--primary-color);
+}
+.navbar-toggler svg.navbar-icon {
+  width: 40px;
+  height: 40px;
+  fill: var(--light-color);
+  outline: none;
+}
+
+/* - Offcanvas
+------------------------------------------------------------- */
+#header-nav .offcanvas.show {
+  z-index: 9999;
+  background-color: var(--gray-color-100);
+}
+.offcanvas.show .nav-item a.nav-link,
+#header-nav .offcanvas.show .nav-item a:hover {
+  font-size: 2em;
+  color: var(--dark-color);
+}
+.offcanvas.show .offcanvas-body .navbar-nav {
+  align-items: unset!important;
+  padding-left: 20px;
+}
+
+@media (min-width: 1399px) {
+  #header .navbar-expand-lg {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  #header .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  #header .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+}
+
+/* 4.2 Intro
+------------------------------------------------------------- */
+#intro .banner-content {
+  top: 30%;
+  left: 30%;
+  z-index: 3;
+  width: 70%;
+}
+
+@media (max-width: 1399px) {
+  #intro .banner-content {
+    left: 10%;
+  }
+}
+
+@media (max-width: 999px) {
+  #intro .banner-content h1 {
+    font-size: 5.8em;
+ }
+}
+
+@media (max-width: 699px) {
+  #intro img.banner-image {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+ }
+ #intro .banner-content {
+    top: 20%;
+  }
+  #intro .banner-content h1 {
+    font-size: 3em;
+ }
+}
+
+/* 4.3 About
+------------------------------------------------------------- */
+#about p {
+   font-size: 1.2em;
+}
+
+/* 4.4 Our Works
+------------------------------------------------------------- */
+.projects-isotope button:hover,
+.projects-isotope button:focus {
+  color: var(--primary-color);
+}
+#projects .projects-content img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* 4.5 Our Services
+------------------------------------------------------------- */
+@media (max-width: 767px) {
+  section#our-services {
+    height: 800px !important;
+ }
+}
+
+/* 4.6 Brand Collections
+------------------------------------------------------------- */
+#brand-collection .brand-item {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  transition: 0.9s ease-in-out;
+}
+#brand-collection .brand-item:hover {
+  background-color: #000;
+}
+
+/* 4.7 Our Team
+------------------------------------------------------------- */
+.team-member ul.social-links {
+  top: 0;
+}
+.team-member ul li {
+  width: 30px;
+  padding: 5px;
+  transform: rotatey(-90deg) perspective(100px);
+  transform-origin: left;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+  background-color: var(--light-color);
+}
+.team-member ul li:first-of-type {
+  transition-delay: .3s;
+}
+.team-member ul li:nth-of-type(2) {
+  transition-delay: 0.6s;
+}
+.team-member ul li:nth-of-type(3) {
+  transition-delay: 0.9s;
+}
+.team-member ul li:last-of-type {
+  transition-delay: 1.3s;
+}
+.team-member:hover ul li {
+  transform: rotatey(0deg);
+}
+#our-team .swiper-arrow {
+  width: 50px;
+  height: 50px;
+}
+#our-team .swiper-arrow.border:hover {
+  border-color: var(--dark-color) !important;
+}
+
+/* 4.8 Testimonial
+------------------------------------------------------------- */
+.author-detail .name {
+  padding-left: 65px;
+}
+#testimonials .swiper.review-swiper {
+  padding-bottom: 50px;
+}
+#testimonials .swiper-horizontal>.swiper-pagination-bullets {
+  bottom: -5px;
+}
+#testimonials .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  background: var(--light-color);
+  width: 10px;
+  height: 10px;
+  margin-right: 20px;
+}
+
+/* 4.9 Our Achievement
+------------------------------------------------------------- */
+.counter-number h4.timer {
+  font-size: 6.4em;
+  color: var(--gray-color-400);
+  transition: 0.5s ease-in-out;
+}
+.counter-number h4:hover {
+  color: var(--primary-color);
+}
+
+/* 4.10 Latest Blog
+------------------------------------------------------------- */
+.post-grid .card-item .card-body {
+  bottom: -84px;
+  transition: 0.8s ease-in-out;
+  width: 85%;
+}
+.post-grid .card-item .card-body h3 {
+  line-height: 1.3;
+}
+.post-grid .card-item .card-body p {
+  opacity: 0;
+  transition: 0.9s ease-in-out;
+}
+.post-grid .card-item:hover .card-body {
+  bottom: 20px;
+}
+.post-grid .card-item:hover .card-body p {
+  opacity: 1;
+}
+

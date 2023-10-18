@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boldiz Contractor</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="aos/aos.css">
+    <link href="css/date-time-picker-component.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+  </head> 
+
+  <body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">   
+      <symbol xmlns="http://www.w3.org/2000/svg" id="facebook" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="youtube" viewBox="0 0 32 32" width="20" height="20">
+        <path fill="currentColor" d="M29.41 9.26a3.5 3.5 0 0 0-2.47-2.47C24.76 6.2 16 6.2 16 6.2s-8.76 0-10.94.59a3.5 3.5 0 0 0-2.47 2.47A36.13 36.13 0 0 0 2 16a36.13 36.13 0 0 0 .59 6.74a3.5 3.5 0 0 0 2.47 2.47c2.18.59 10.94.59 10.94.59s8.76 0 10.94-.59a3.5 3.5 0 0 0 2.47-2.47A36.13 36.13 0 0 0 30 16a36.13 36.13 0 0 0-.59-6.74ZM13.2 20.2v-8.4l7.27 4.2Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 256 256" width="20" height="20">
+        <path fill="currentColor" d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Zm48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56Zm40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="twitter" viewBox="0 0 24 24" width="20" height="20">
+        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="linkedin" viewBox="0 0 512 512" width="20" height="20">
+        <path fill="currentColor" d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32Zm-273.3 373.43h-64.18V205.88h64.18ZM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43c0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43Zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44c-17.74 0-28.24 12-32.91 23.69c-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44c42.13 0 74 27.77 74 87.64Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="navbar-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </symbol> 
+      <symbol xmlns="http://www.w3.org/2000/svg" id="icon-arrow-left" viewBox="0 0 15 15">
+        <path fill="currentColor" fill-rule="evenodd" d="m2.707 8l3.147 3.146l-.708.707L.793 7.5l4.353-4.354l.708.708L2.707 7H14v1H2.707Z" clip-rule="evenodd"/>
+      </symbol>
+      <svg xmlns="http://www.w3.org/2000/svg" id="icon-arrow-right" viewBox="0 0 15 15">
+        <path fill="currentColor" fill-rule="evenodd" d="M9.854 3.146L14.207 7.5l-4.353 4.354l-.708-.708L12.293 8H1V7h11.293L9.146 3.854l.708-.708Z" clip-rule="evenodd"/>
+      </svg>
+    </svg>
+    
+    <div id="bodywrap" class="overflow-hidden">
+
+      <header id="header" class="site-header position-absolute">
+        <nav id="header-nav" class="navbar navbar-expand-lg px-3 mt-3">
+          <div class="container-lg">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/main-logo.png" class="logo">
+            </a>
+            <button class="navbar-toggler d-flex d-lg-none order-3 p-2 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <svg class="navbar-icon">
+                <use xlink:href="#navbar-icon"></use>
+              </svg>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+              <div class="offcanvas-header px-4 pb-0">
+                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul id="navbar" class="navbar-nav text-uppercase justify-content-lg-center justify-content-md-end align-items-center flex-grow-1 pe-3 text-hover">
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase active p-0" href="#intro">Home</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="#about">About</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="#activities">Projects</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="#our-rooms">Services</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="#booking-wrap">News</a>
+                  </li> 
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0 text-primary" href="https://templatesjungle.gumroad.com/l/boldiz-contractor-and-building-free-figma-website-design" target="_blank">Get Pro</a>
+                  </li>
+                </ul>
+                
+                <div class="social-links">
+                  <ul class="list-unstyled d-flex">
+                    <li class="pe-3"><a href="#" class="light">
+                      <svg class="facebook" width="20" height="20">
+                        <use xlink:href="#facebook"></use>
+                      </svg>
+                    </a></li>
+                    <li class="pe-3"><a href="#" class="light">
+                      <svg class="instagram" width="20" height="20">
+                        <use xlink:href="#instagram"></use>
+                      </svg>
+                    </a></li>
+                    <li class="pe-3"><a href="#" class="light">
+                      <svg class="twitter" width="20" height="20">
+                        <use xlink:href="#twitter"></use>
+                      </svg>
+                    </a></li>
+                    <li class="pe-3"><a href="#" class="light">
+                      <svg class="linkedin" width="20" height="20">
+                        <use xlink:href="#linkedin"></use>
+                      </svg>
+                    </a></li>
+                    <li class="pe-3"><a href="#" class="light">
+                      <svg class="youtube" width="20" height="20">
+                        <use xlink:href="#youtube"></use>
+                      </svg>
+                    </a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="intro">
+        <div class="image-holder position-relative">
+          <img src="images/banner-item1.jpg" alt="banner" class="banner-image">              
+        </div>
+        <div class="container-lg">
+          <div class="banner-content position-absolute" data-aos="fade-up" data-aos-duration="2000">
+            <h1 class="banner-title light text-uppercase fw-bold">We are best construction company</h1>
+            <a href="#" class="btn-slide btn-medium btn-light hover-slide-right text-uppercase mt-5"><span>View our projects</span></a>
+          </div>          
+        </div>
+      </section>   
+
+      <section id="about" class="padding-large bg-gray-200">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-6">
+              <div class="section-header">
+                <h2 class="text-uppercase mb-3 left-pattern">About Us</h2>
+                <h3 class="text-uppercase">Recognize more about our company</h3>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <p><strong class="pb-2 d-block">Enim leo leo non in viverra adipiscing nisi sed dictum nisi blandit.</strong>
+                Gravida feugiat viverra porttitor semper in faucibus ut. Ipsum, vel aliquet purus urna placerat convallis felis. Pretium curabitur fames est.</p>
+                <a href="#" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase mt-5"><span>About Us</span></a>            
+            </div>        
+              
+          </div>
+        </div>
+      </section>
+      
+      <section id="projects" class="padding-large">
+        <div class="container-fluid">
+
+          <div class="section-header offset-lg-4">
+            <h2 class="text-uppercase mb-3 left-pattern">Our Projects</h2>
+            <h3 class="text-uppercase">Explore our works</h3>
+          </div>
+
+          <div class="projects-isotope">
+
+            <div class="projects-flters d-flex flex-wrap justify-content-center my-5" data-aos="fade-zoom-in" data-aos-delay="100">
+              <button class="filter-button active border-0 bg-transparent me-5 mb-3" data-filter="*">All</button>
+              <button class="filter-button border-0 bg-transparent me-5 mb-3" data-filter=".building">Buildings</button>
+              <button class="filter-button border-0 bg-transparent me-5 mb-3" data-filter=".interior">Interior & Exterior</button>
+              <button class="filter-button border-0 bg-transparent me-5 mb-3" data-filter=".renovate">Renovate</button>
+              <button class="filter-button border-0 bg-transparent me-5 mb-3" data-filter=".industry">Industry</button>
+              <button class="filter-button border-0 bg-transparent me-5" data-filter=".road">Road</button>
+            </div>
+
+            <div class="row isotope-container">
+
+              <div class="col-lg-4 col-md-6 item building">
+                <div class="projects-content mx-auto">
+                  <img src="images/projects-item1.jpg" class="reveal-curve-top" alt="building">                
+                </div>
+                <h3 class="fs-3 text-uppercase text-center mt-3 mb-5"><a href="#">Outbox creatives building</a></h3>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item renovate">
+                <div class="projects-content mx-auto">
+                  <img src="images/projects-item2.jpg" class="img-fluid" alt="building">               
+                </div>
+                <h3 class="fs-3 text-uppercase text-center mt-3 mb-5"><a href="#">Slova private residence</a></h3>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item industry">
+                <div class="projects-content mx-auto">
+                  <img src="images/projects-item3.jpg" class="img-fluid" alt="building">                
+                </div>
+                <h3 class="fs-3 text-uppercase text-center mt-3 mb-5"><a href="#">Jaguare garment industry</a></h3>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item industry">
+                <div class="projects-content">
+                  <img src="images/projects-item4.jpg" class="img-fluid" alt="building">                
+                </div>
+                <h3 class="fs-3 text-uppercase text-center mt-3 mb-5"><a href="#">Jaguare garment industry</a></h3>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item road">
+                <div class="projects-content">
+                  <img src="images/projects-item5.jpg" class="img-fluid" alt="building">                
+                </div>
+                <h3 class="fs-3 text-uppercase text-center mt-3 mb-5"><a href="#">Jaguare garment industry</a></h3>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item building">
+                <div class="projects-content">
+                  <img src="images/projects-item6.jpg" class="img-fluid" alt="building">                
+                </div>
+                <h3 class="fs-3 text-uppercase text-center mt-3 mb-5"><a href="#">Jaguare garment industry</a></h3>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item road">
+                <div class="projects-content">
+                  <img src="images/projects-item7.jpg" class="img-fluid" alt="building">                
+                </div>
+                <h3 class="fs-3 text-uppercase text-center mt-3 mb-5"><a href="#">Jaguare garment industry</a></h3>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item interior">
+                <div class="projects-content">
+                  <img src="images/projects-item9.jpg" class="img-fluid" alt="building">                
+                </div>
+                <h3 class="fs-3 text-uppercase text-center mt-3 mb-5"><a href="#">Jaguare garment industry</a></h3>
+              </div>
+
+              <div class="col-lg-4 col-md-6 item interior">
+                <div class="projects-content">
+                  <img src="images/projects-item10.jpg" class="img-fluid" alt="building">                
+                </div>
+                <h3 class="fs-3 text-uppercase text-center mt-3 mb-5"><a href="#">Jaguare garment industry</a></h3>
+              </div>
+
+            </div><!-- End Projects Container -->
+
+          </div>
+
+        </div>
+      </section>
+
+      <section id="our-services" class="jarallax d-flex align-items-center" style="background-image: url(images/bg-image1.jpg); width: 100%; height: 535px; background-repeat: no-repeat;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item">
+                <h3 class="light fs-1">Building New Homes</h3>
+                <p class="light">Vehicula at eget a arcu neque ultricies.</p>
+                <a href="#" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase my-5"><span>Read More</span></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item">
+                <h3 class="light fs-1">Designing Spaces</h3>
+                <p class="light">Ultricies liquet tempus vel amet.</p>
+                <a href="#" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase my-5"><span>Read More</span></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item">
+                <h3 class="light fs-1">Road Maintenance</h3>
+                <p class="light">Tempus vel amet eget egestas arcu non.</p>
+                <a href="#" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase my-5"><span>Read More</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="brand-collection" class="padding-large overflow-hidden">
+        <div class="container">
+          <div class="row justify-content-between">
+
+            <div class="col-lg-3 pb-3">
+              <div class="brand-item bg-gray-200">
+                <img src="images/brand-item1.png" alt="brand">
+              </div>
+            </div>
+            <div class="col-lg-3 pb-3">
+              <div class="brand-item bg-gray-200">
+                <img src="images/brand-item2.png" alt="brand">
+              </div>
+            </div>
+            <div class="col-lg-3 pb-3">
+              <div class="brand-item bg-gray-200">
+                <img src="images/brand-item3.png" alt="brand">
+              </div>
+            </div>
+            <div class="col-lg-3 pb-3">
+              <div class="brand-item bg-gray-200">
+                <img src="images/brand-item4.png" alt="brand">
+              </div>
+            </div>
+            <div class="col-lg-3 pb-3">
+              <div class="brand-item bg-gray-200">
+                <img src="images/brand-item5.png" alt="brand">
+              </div>
+            </div>
+            <div class="col-lg-3 pb-3">
+              <div class="brand-item bg-gray-200">
+                <img src="images/brand-item6.png" alt="brand">
+              </div>
+            </div>
+            <div class="col-lg-3 pb-3">
+              <div class="brand-item bg-gray-200">
+                <img src="images/brand-item7.png" alt="brand">
+              </div>
+            </div>
+            <div class="col-lg-3 pb-3">
+              <div class="brand-item bg-gray-200">
+                <img src="images/brand-item8.png" alt="brand">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section id="our-team" class="padding-large pt-0" data-aos="fade-up" data-aos-once="true">
+        <div class="container">
+          <div class="row">
+
+            <div class="swiper-header d-flex flex-wrap justify-content-between mb-3">
+
+              <div class="section-header mb-5 text-uppercase">
+                <h2 class="mb-3 left-pattern">Meet Our Team</h2>
+                <h3>Our professional team</h3>
+              </div>  
+              
+              <div class="swiper-arrow-wrap d-flex">
+                <div class="swiper-arrow border rounded-circle d-flex align-items-center justify-content-center me-3">
+                  <svg class="icon-arrow-left" width="40" height="20">
+                    <use xlink:href="#icon-arrow-left" />
+                  </svg>
+                </div> 
+                <div class="swiper-arrow border rounded-circle d-flex align-items-center justify-content-center">
+                  <svg class="icon-arrow-right" width="40" height="20">
+                    <use xlink:href="#icon-arrow-right" />
+                  </svg>
+                </div> 
+              </div>
+              <!-- swiper-arrow-wrap -->
+
+            </div>
+            <!-- swiper-header -->
+
+            <div class="swiper team-swiper">   
+              <div class="swiper-wrapper">              
+
+                <div class="swiper-slide">
+                  <div class="team-member position-relative">
+                    <div class="image-holder zoom-effect mx-auto">
+                      <img src="images/team-item1.jpg" alt="team member" class="img-fluid">
+                        <ul class="social-links list-unstyled position-absolute">
+                          <li>
+                            <a href="#" class="text-dark">                          
+                              <svg class="facebook text-primary-500" width="25" height="20" aria-hidden="true">
+                                <use xlink:href="#facebook"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-dark">                          
+                              <svg class="twitter text-primary-500" width="25" height="20" aria-hidden="true">
+                                <use xlink:href="#twitter"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-dark">                          
+                              <svg class="instagram text-primary-500" width="25" height="20" aria-hidden="true">
+                                <use xlink:href="#instagram"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="text-dark">                          
+                              <svg class="youtube text-primary-500" width="25" height="20" aria-hidden="true">
+                                <use xlink:href="#youtube"></use>
+                              </svg>
+                            </a>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="member-info pt-4 text-center">
+                      <h3 class="fs-4 text-uppercase">Alex Smith</h3>
+                      <span class="fs-6">Co-founder</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="team-member position-relative">
+                    <div class="image-holder zoom-effect">
+                      <img src="images/team-item2.jpg" alt="team member" class="img-fluid">
+                      <ul class="social-links list-unstyled position-absolute">
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="facebook text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#facebook"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="twitter text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#twitter"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="instagram text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#instagram"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="youtube text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#youtube"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="member-info pt-4 text-center">
+                      <h3 class="fs-4 text-uppercase">Luma Miller</h3>
+                      <span class="fs-6">Manager</span>                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="team-member position-relative">
+                    <div class="image-holder zoom-effect">
+                      <img src="images/team-item3.jpg" alt="team member" class="img-fluid">
+                      <ul class="social-links list-unstyled position-absolute">
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="facebook text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#facebook"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="twitter text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#twitter"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="instagram text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#instagram"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="youtube text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#youtube"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="member-info pt-4 text-center">
+                      <h3 class="fs-4 text-uppercase">Michael Strokes</h3>
+                      <span class="fs-6">Manager</span>                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="team-member">
+                    <div class="image-holder">
+                      <img src="images/team-item1.jpg" alt="team member" class="img-fluid">
+                      <ul class="social-links list-unstyled position-absolute">
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="facebook text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#facebook"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="twitter text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#twitter"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="instagram text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#instagram"></use>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-dark">                          
+                            <svg class="youtube text-primary-500" width="25" height="20" aria-hidden="true">
+                              <use xlink:href="#youtube"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="member-info pt-4 text-center">
+                      <h3 class="fs-4 text-uppercase">William Brown</h3>
+                      <span class="fs-6">Staff</span>                      
+                    </div>
+                  </div>
+                </div>              
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="padding-large jarallax" style="background-image: url(images/bg-image2.jpg); width: 100%; height: 808px; background-repeat: no-repeat; background-position: center;">
+        <div class="container">
+          <div class="row">
+
+            <div class="section-header mb-5 text-uppercase">
+              <h2 class="light left-pattern">Testimonials</h2>
+              <h3 class="light">What our clients says</h3>
+            </div>
+
+            <div class="swiper review-swiper light">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="review-item bg-light p-5">
+                    <blockquote class="fs-5">“A pellen tesque pretium feugiat vel mobi sagittis lorem habi tasse cursus ipsum quis nec eget facilisis. Quis nibh ut bindum nisl quis placerat proin tortor mattis.”               
+                    </blockquote>
+                    <div class="author-detail left-pattern">
+                      <div class="name fw-bold">Kelly Garcia</div>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="swiper-slide">
+                  <div class="review-item bg-light p-5">
+                    <blockquote class="fs-5">“A pellen tesque pretium feugiat vel mobi sagittis lorem habi tasse cursus ipsum quis nec eget facilisis. Quis nibh ut bindum nisl quis placerat proin tortor mattis.”               
+                    </blockquote>
+                    <div class="author-detail left-pattern">
+                      <div class="name fw-bold">Jonas Müller</div>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="swiper-slide">
+                  <div class="review-item bg-light p-5">
+                    <blockquote class="fs-5">“A pellen tesque pretium feugiat vel mobi sagittis lorem habi tasse cursus ipsum quis nec eget facilisis. Quis nibh ut bindum nisl quis placerat proin tortor mattis.”               
+                    </blockquote>
+                    <div class="author-detail left-pattern">
+                      <div class="name fw-bold">Lucia Bianchi</div>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="swiper-slide">
+                  <div class="review-item bg-light p-5">
+                    <blockquote class="fs-5">“A pellen tesque pretium feugiat vel mobi sagittis lorem habi tasse cursus ipsum quis nec eget facilisis. Quis nibh ut bindum nisl quis placerat proin tortor mattis.”               
+                    </blockquote>
+                    <div class="author-detail left-pattern">
+                      <div class="name fw-bold">Dmitri Abramov</div>
+                    </div>
+                  </div>
+                </div>  
+              </div>              
+                <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="our-achievement" class="padding-large bg-gray-200">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter-info text-center d-flex align-items-end">
+                <div class="counter-number d-flex align-items-center">
+                  <h4 class="timer fw-bold m-0" data-to="100" data-speed="1000">780</h4>               
+                </div>
+                <p class="counter-description text-uppercase ps-2 fw-bold">Projects done</p>
+              </div>    
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter-info text-center d-flex align-items-end">
+                <div class="counter-number d-flex align-items-center">
+                  <h4 class="timer fw-bold m-0" data-to="100" data-speed="1000">127</h4>               
+                </div>
+                <p class="counter-description text-uppercase ps-2 fw-bold">Total members</p>
+              </div>     
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter-info text-center d-flex align-items-end">
+                <div class="counter-number d-flex align-items-center">
+                  <h4 class="timer fw-bold m-0" data-to="100" data-speed="1000">627</h4>               
+                </div>
+                <p class="counter-description text-uppercase ps-2 fw-bold">Happy customers</p>
+              </div>    
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter-info text-center d-flex align-items-end">
+                <div class="counter-number d-flex align-items-center">
+                  <h4 class="timer fw-bold m-0" data-to="10" data-speed="1000">28</h4>               
+                </div>
+                <p class="counter-description text-uppercase ps-2 fw-bold">Awards</p>
+              </div>   
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="latest-blog" class="padding-large">
+        <div class="container">
+          <div class="row">
+            <div class="section-header text-uppercase">
+              <h2 class="left-pattern">News Articles</h2>
+              <h3>Read Latest Articles</h3>
+            </div>
+            <div class="post-grid d-flex flex-wrap justify-content-center mt-5">
+              <div class="col-lg-4 col-md-6 mb-3">
+                <div class="card-item position-relative">
+                  <div class="card border-0">
+                    <div class="card-image">
+                      <img src="images/post-item1.jpg" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="card-body p-3 position-absolute">
+                    <div class="meta-title"><em class="light">Feb 1, 2022  /  Buildings</em></div>
+                    <h3 class="card-title fs-3 text-uppercase mt-3 light">
+                      <a href="blog.html light">Top 10 mindblowing architecture buildings in the world</a>
+                    </h3>
+                    <p class="light">It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a condition that’s certainly true... <a href="blog.html" class="text-decoration-underline"><em>Read more</em></a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 mb-3">
+                <div class="card-item position-relative">
+                  <div class="card border-0">
+                    <div class="card-image">
+                      <img src="images/post-item2.jpg" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="card-body p-3 position-absolute">
+                    <div class="meta-title"><em class="light">Feb 12, 2022  /  Construction</em></div>
+                    <h3 class="card-title fs-3 text-uppercase mt-3 light">
+                      <a href="blog.html">Amazing technologies that helped to create creatives works</a>
+                    </h3>
+                    <p class="light">It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a condition that’s certainly true... <a href="blog.html" class="text-decoration-underline"><em>Read more</em></a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="card-item position-relative">
+                  <div class="card border-0">
+                    <div class="card-image">
+                      <img src="images/post-item3.jpg" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="card-body p-3 position-absolute">
+                    <div class="meta-title"><em class="light">Feb 30, 2022  /  Company</em></div>
+                    <h3 class="card-title fs-3 text-uppercase mt-3 light">
+                      <a href="blog.html">100 best construction company around the world</a>
+                    </h3>
+                    <p class="light">It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a condition that’s certainly true... <a href="blog.html" class="text-decoration-underline"><em>Read more</em></a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-center">
+            <a href="#" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase mt-5"><span>All articles</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="jarallax d-flex align-items-center padding-large" style="background-image: url(images/bg-image3.jpg); width: 100%; height: 567px; background-repeat: no-repeat; background-position: center;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <h3 class="light text-uppercase">Are you ready to start new project ?</h3>
+              <p class="light mt-4">If you have any projects in mind say hello at <strong><a href="mailto:">contact@yourinfo.com</a></strong> or just call us at <strong><a href="">+111 1234 2344 1232.</a></strong></p>
+              <a href="#" class="btn-slide btn-medium btn-light hover-slide-right text-uppercase mt-5"><span>Get in touch</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer" class="overflow-hidden padding-large">
+        <div class="container">
+          <div class="row d-flex flex-wrap justify-content-between">          
+            
+            <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+              <div class="footer-menu">
+                <img src="images/main-logo-dark.png" alt="footer logo" class="pb-4">
+                <p>Vehicula at eget a arcu neque, ultricies liquet tempus.</p>
+              </div>
+            </div>                   
+            
+            <div class="col-lg-2 col-md-6 col-sm-6 pb-3">
+              <div class="footer-menu">
+                <ul class="menu-list list-unstyled">
+                  <li class="pb-2">
+                    <a href="#about">About</a>
+                  </li>
+                  <li class="pb-2">
+                    <a href="#">Terms & Conditions</a>
+                  </li>
+                  <li class="pb-2">
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li class="pb-2">
+                    <a href="#">Career</a>
+                  </li>
+                  <li class="pb-2">
+                    <a href="#">Contact</a>
+                  </li>
+                  <li class="pb-2">
+                    <a href="#">Help</a>
+                  </li>
+                </ul>
+              </div>
+            </div>                          
+            
+            <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+              <div class="footer-menu">
+                <ul class="menu-list list-unstyled">
+                  <li class="pb-2">
+                    <a href="#about">Quick Links</a>
+                  </li>
+                  <li class="pb-2">
+                    <a href="#">Newsletter</a>
+                  </li>
+                  <li class="pb-2">
+                    <a href="#">Articles</a>
+                  </li>
+                  <li class="pb-2">
+                    <a href="#">Location</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>                                
+            
+            <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+              <div class="footer-menu">
+                <ul class="menu-list list-unstyled">
+                  <li class="pb-2">163 Elm Drive, New York City United States
+                  </li>
+                  <li class="pb-2">(+089) 234-516-6123
+                  </li>
+                  <li class="pb-2">
+                    <a href="mailto:">info@yourinfo.com</a>
+                  </li>
+                </ul>
+              </div>
+            </div>  
+
+          </div>
+        </div>
+      </footer>  
+
+    </div>
+  <!-- body-wrap -->
+
+    <div class="footer-bottom d-flex flex-wrap justify-content-between border-top pt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <p>©2023 Boldiz  |  Designed by:  <strong><a href="https://templatesjungle.com/">TemplatesJungle.</a></strong></p>
+          </div>
+          <div class="col-lg-6">
+            <ul class="social-links list-unstyled d-flex justify-content-end">
+              <li class="pe-3">
+                <a href="#">                          
+                  <svg class="facebook text-primary-500" width="25" height="20" aria-hidden="true">
+                    <use xlink:href="#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pe-3">
+                <a href="#">                          
+                  <svg class="twitter text-primary-500" width="25" height="20" aria-hidden="true">
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pe-3">
+                <a href="#">                          
+                  <svg class="instagram text-primary-500" width="25" height="20" aria-hidden="true">
+                    <use xlink:href="#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">                          
+                  <svg class="youtube text-primary-500" width="25" height="20" aria-hidden="true">
+                    <use xlink:href="#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>    
+        </div>  
+      </div>
+    </div>
+    <!-- footer-bottom -->
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="aos/aos.js"></script>	
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
