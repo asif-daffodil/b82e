@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #phone {
+            width: 300px;
+            height: 600px;
+            background-color: #000;
+            border-radius: 20px;
+            margin: 0 auto;
+            margin-top: 50px;
+            position: relative;
+            color: #fff;
+            display: grid;
+            place-items: center;
+        }
+        .btns{
+            width: max-content;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="phone" onmouseover="mobile()"></div>
+    <div class="btns">
+        <button onclick="sb()">So beautiful</button>
+        <button onclick="se()">So elegant</button>
+        <button onclick="just()">WOW</button>
+        <br><br>
+        <input type="text" placeholder="First Name" id="fname" >
+        <input type="text" placeholder="Last Name" id="lname" >
+        <button onclick="namefunc()">Submit</button>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
