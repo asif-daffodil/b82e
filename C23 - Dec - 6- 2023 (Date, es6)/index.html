@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="showText"></div>
+    
+    <script>
+        var showText = document.getElementById("showText");
+
+        /* function personInfo () {
+            this.firstName = "Md";
+            this.lastName = "Ali";
+            this.fullName = function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        var person = new personInfo();
+        showText.innerHTML = person.fullName(); */
+        // var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        // var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        function dateFunc () {
+            var d = new Date();
+            showText.innerHTML = d.getDate() + "/" + d.toLocaleString('default', { month: 'long'}) + "/" + d.getFullYear() + " " + d.toLocaleString('default', { weekday: 'long' }) + " - " + d.toLocaleString('default', { hour: '2-digit', minute: '2-digit', second: 'numeric', hour12: true });
+        }
+        setInterval(dateFunc, 1000);
+
+        // es6 - ecma script 6
+        // let, const, arrow function, template string, spread operator, destructuring, class, inheritance, promise, async await
+
+        var x = 10;
+        var x = 20;
+        x= 30;
+
+        let y = 10;
+        // let y = 20;
+        y = 20;
+
+        const z = 10;
+        // const z = 20;
+        // z = 20;
+
+        // arrow function
+        function add (a, b) {
+            return a + b;
+        }
+
+        var add = function (a, b) {
+            return a + b;
+        }
+
+        const add = (a, b) => {
+            return a + b;
+        }
+    </script>
+</body>
+</html>
